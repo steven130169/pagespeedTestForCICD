@@ -12,5 +12,7 @@ jobs:
           node-version: 22
       - name: Install dependencies
         run: npm install
-      - name: Run Lighthouse test
-        run: node index.js
+      - name: Install Lighthouse CI
+        run: npm install -g @lhci/cli@0.15.x
+      - name: Run Lighthouse CI
+        run: lhci autorun
